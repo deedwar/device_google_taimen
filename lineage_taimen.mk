@@ -10,6 +10,8 @@ $(call inherit-product, device/google/taimen/aosp_taimen.mk)
 
 -include device/google/taimen/device-lineage.mk
 
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_taimen
 PRODUCT_BRAND := google
@@ -22,3 +24,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/taimen/taimen:11/RP1A.201005.004/6782484:user/release-keys
 
 $(call inherit-product-if-exists, vendor/google/taimen/taimen-vendor.mk)
+$(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+
