@@ -48,4 +48,5 @@ TARGET_RECOVERY_UI_LIB := \
 BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=12
 
 # Allow Lineage config to override others
--include device/google/taimen/BoardConfigLineage.mk
+TARGET_KERNEL_CONFIG := wahoo_defconfig
+
