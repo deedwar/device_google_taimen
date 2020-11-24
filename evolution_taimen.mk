@@ -2,8 +2,15 @@
 TARGET_SCREEN_HEIGHT := 2880
 TARGET_SCREEN_WIDTH := 1440
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Evolution X stuff.
+EVO_BUILD_TYPE := OFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+WITH_GAPPS := true
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/taimen/aosp_taimen.mk)
@@ -11,7 +18,7 @@ $(call inherit-product, device/google/taimen/aosp_taimen.mk)
 -include device/google/taimen/device-lineage.mk
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_taimen
+PRODUCT_NAME := evolution_taimen
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 2 XL
 PRODUCT_RESTRICT_VENDOR_FILES := false
