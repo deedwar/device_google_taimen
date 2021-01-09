@@ -1,7 +1,8 @@
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2880
-TARGET_SCREEN_WIDTH := 1440
-TARGET_BOOT_ANIMATION_RES := 1440
+# Inherit some common Evolution X stuff.
+TARGET_BOOT_ANIMATION_RES := 1080
+EVO_BUILD_TYPE := OFFICIAL
+WITH_GAPPS := true
+TARGET_INCLUDE_WIFI_EXT := true
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
